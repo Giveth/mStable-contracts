@@ -467,7 +467,7 @@ contract("Liquidator", async (accounts) => {
             const s1 = await snapshotData();
             // 10 COMP liquidated for > 1000 mUSD
             expect(s1.savingsManagerBal.sub(s0.savingsManagerBal)).bignumber.gt(
-                simpleToExactAmount(1000, 18),
+                simpleToExactAmount(1000, 18).toNumber(),
             );
 
             await time.increase(ONE_WEEK.addn(1));

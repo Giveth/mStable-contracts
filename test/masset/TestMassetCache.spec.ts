@@ -754,7 +754,7 @@ contract("Masset - Cache", async (accounts) => {
                 compositionBefore.sumOfBassets,
             );
 
-            expect(compositionAfter.sumOfBassets).bignumber.gt(compositionBefore.sumOfBassets);
+            expect(compositionAfter.sumOfBassets).bignumber.gt(compositionBefore.sumOfBassets.toNumber());
             expect(compositionAfter.surplus).bignumber.eq(compositionBefore.surplus);
             expect(compositionAfter.totalSupply).bignumber.eq(
                 compositionBefore.totalSupply.add(vaultBalanceDiff),

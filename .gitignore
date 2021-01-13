@@ -24,7 +24,6 @@ typings/
 # Optional eslint cache
 .eslintcache
 
-
 # dotenv environment variables file
 .env
 
@@ -43,11 +42,14 @@ contracts-output/
 /dist
 /transpiled
 /types/generated/*
+/types/ethers/*
 
 package-lock.json
 
-# .vscode
+# VS Code
 .vscode/
+# WebStorm
+.idea
 
 # solcover
 .coverage_cache/
