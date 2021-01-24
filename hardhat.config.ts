@@ -15,6 +15,9 @@ export default {
         hardhat: { allowUnlimitedContractSize: true },
         localhost: { url: "http://localhost:8545" },
         fork: { url: "http://localhost:7545" },
+        // export the NODE_URL environment variable to use remote nodes like Alchemy or Infura. eg
+        // export NODE_URL=https://eth-mainnet.alchemyapi.io/v2/yourApiKey
+        env: { url: process.env.NODE_URL || "" }
     },
     solidity: {
         version: "0.5.16",
